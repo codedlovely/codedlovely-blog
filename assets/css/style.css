@@ -57,6 +57,8 @@ hr { height: 1px; max-width: 300px; margin: 3rem auto; padding: 0; border: none;
 
 blockquote { background-color: #ececec; font-size: 1.3rem; font-style: italic; padding: 0.8rem; }
 
+blockquote span { display: block; text-align: right; }
+
 .fa-hand-spock { color: #e6c7a0; }
 
 /*# sourceMappingURL=style.css.map */
