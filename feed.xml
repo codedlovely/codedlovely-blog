@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-05T13:18:59+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Hello World</title><link href="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2022-05-05T00:00:00+09:00</published><updated>2022-05-05T00:00:00+09:00</updated><id>https://blog.codedlovely.net/blogging/2022/05/05/hello-world</id><content type="html" xml:base="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html"><![CDATA[<p>It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-05T13:24:14+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Hello World</title><link href="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2022-05-05T00:00:00+09:00</published><updated>2022-05-05T00:00:00+09:00</updated><id>https://blog.codedlovely.net/blogging/2022/05/05/hello-world</id><content type="html" xml:base="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html"><![CDATA[<p>It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.</p>
 
 <p>I’ve been working on this blog for the last couple of days, and finally launched with subdomain of codedlovely.net. I built this blog from scratch while referring to the Jekyll official documentation. Ah, this sense of accomplishment ☺.</p>
 
@@ -14,15 +14,5 @@
 <blockquote>
   <p>“Light travels faster than sound. This is why some people appear bright until you hear them speak.”<br /><span> - Alan Dundes</span></p>
 </blockquote>
-
-<ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />checklist</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />checklist
-    <ul class="task-list">
-      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />sub</li>
-    </ul>
-  </li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />checklist</li>
-</ul>
 
 <p>See you <i class="fa-solid fa-hand-spock"></i></p>]]></content><author><name>Ai</name></author><category term="Blogging" /><summary type="html"><![CDATA[It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.]]></summary></entry></feed>
