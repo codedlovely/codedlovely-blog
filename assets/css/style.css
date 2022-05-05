@@ -59,6 +59,10 @@ blockquote { background-color: #ececec; font-size: 1.3rem; font-style: italic; p
 
 blockquote span { display: block; text-align: right; }
 
+.task-list { list-style: none; padding-left: 0; }
+
+.task-list task-list-item-checkbox:disabled { border: 1px solid red; }
+
 .fa-hand-spock { color: #e6c7a0; }
 
 /*# sourceMappingURL=style.css.map */
