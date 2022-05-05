@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Tajawal:wght@300;400;700;800;900&display=swap");
-/*
-font-family: 'Corben', sans-serif;
-font-family: 'Tajawal', sans-serif;
-*/
 html { scroll-behavior: smooth; }
 
 body { margin: 0; padding: 0 18rem; font-family: 'Tajawal', sans-serif; font-size: 20px; font-weight: 300; background-color: #ffffff; color: #505050; }
@@ -57,11 +53,7 @@ hr { height: 1px; max-width: 300px; margin: 3rem auto; padding: 0; border: none;
 
 blockquote { background-color: #ececec; font-size: 1.3rem; font-style: italic; padding: 0.8rem; }
 
-blockquote span { display: block; text-align: right; }
-
-.task-list { list-style: none; padding-left: 0; }
-
-.task-list task-list-item-checkbox:disabled { border: 1px solid red; }
+blockquote span { display: block; text-align: right; font-style: normal; font-size: 1.1rem; }
 
 .fa-hand-spock { color: #e6c7a0; }
 
