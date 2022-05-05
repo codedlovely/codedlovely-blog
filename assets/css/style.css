@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Tajawal:wght@300;400;700;800;900&display=swap");
+/*
+font-family: 'Corben', sans-serif;
+font-family: 'Tajawal', sans-serif;
+*/
+html { scroll-behavior: smooth; }
+
+body { margin: 0; padding: 0 18rem; font-family: 'Tajawal', sans-serif; font-size: 20px; font-weight: 300; background-color: #ffffff; color: #505050; }
+
+@media (max-width: 420px) { body { padding: 0 1rem; } }
+
+@media (min-width: 421px) and (max-width: 913px) { body { padding: 0 2rem; } }
+
+a { color: #ff7575; text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Corben', sans-serif; font-weight: 300; }
+
+#header { margin-bottom: 3rem; display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1 1 auto; flex-wrap: wrap; }
+
+#header h1 { font-size: 1.4rem; font-weight: bold; }
+
+#header h1::after { content: '\2665'; color: #ff0000; font-size: 0.8rem; }
+
+#header span { display: block; margin-top: -0.8rem; margin-bottom: 1.8rem; }
+
+#header ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; }
+
+#header a { color: #505050; text-transform: uppercase; }
+
+.current { text-decoration: underline #ff7575; }
+
+.date, .meta { font-size: 1.1rem; }
+
+.content { margin-bottom: 3rem; }
+
+.postcontent ul li, .pagecontent ul li { margin-bottom: 1rem; }
+
+.pagination { margin: 6rem 0 3rem 0; display: flex; justify-content: space-between; align-items: center; flex: 1 1 auto; flex-wrap: wrap; }
+
+.postNavigation { margin: 4rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; flex: 1 1 auto; }
+
+#footer { padding: 6rem 0 3rem; display: flex; justify-content: center; align-items: center; gap: 2rem; flex: 1 1 auto; flex-wrap: wrap; }
+
+#copyright { font-family: 'Corben', sans-serif; font-weight: 300; font-size: 1rem; }
+
+#footer a { color: #505050; }
+
+#footer a:hover { color: #ff7575; }
+
+#footer ul { margin: 0; padding: 0; list-style: none; display: flex; justify-content: space-evenly; align-items: center; gap: 1rem; }
+
+#footer ul li { font-size: 1.8rem; }
+
+hr { height: 1px; max-width: 300px; margin: 3rem auto; padding: 0; border: none; background: linear-gradient(0.25turn, #ffffff, #a0a0a0, #ffffff); }
+
+.fa-hand-spock { color: #e6c7a0; }
+
+/*# sourceMappingURL=style.css.map */
