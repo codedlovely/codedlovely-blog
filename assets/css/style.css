@@ -55,6 +55,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Corben', sans-serif; font-weight: 300; }
 
 hr { height: 1px; max-width: 300px; margin: 3rem auto; padding: 0; border: none; background: linear-gradient(0.25turn, #ffffff, #a0a0a0, #ffffff); }
 
+blockquote { background-color: #ececec; font-size: 1.3rem; font-style: italic; padding: 0.8rem; }
+
 .fa-hand-spock { color: #e6c7a0; }
 
 /*# sourceMappingURL=style.css.map */
