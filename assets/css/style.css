@@ -55,6 +55,16 @@ blockquote { background-color: #ececec; font-size: 1.3rem; font-style: italic; p
 
 blockquote span { display: block; text-align: right; font-style: normal; font-size: 1.1rem; }
 
+.liquid { background-color: #505050; color: #ffffff; border-radius: 0.4rem; padding: 0 0.8rem; }
+
+.language-plaintext { font-family: 'Tajawal', sans-serif; font-size: 20px; font-weight: 300; }
+
+p img { max-width: 600px; border: 1px solid #505050; }
+
+@media (max-width: 420px) { p img { max-width: 100%; } }
+
+@media (min-width: 421px) and (max-width: 913px) { p img { max-width: 100%; } }
+
 .fa-hand-spock { color: #e6c7a0; }
 
 /*# sourceMappingURL=style.css.map */

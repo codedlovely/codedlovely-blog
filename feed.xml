@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-05T15:54:49+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Hello World</title><link href="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2022-05-05T00:00:00+09:00</published><updated>2022-05-05T00:00:00+09:00</updated><id>https://blog.codedlovely.net/blogging/2022/05/05/hello-world</id><content type="html" xml:base="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html"><![CDATA[<p>It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-07T11:10:14+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Jekyll: Modifying Post Excerpt</title><link href="https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt.html" rel="alternate" type="text/html" title="Jekyll: Modifying Post Excerpt" /><published>2022-05-06T00:00:00+09:00</published><updated>2022-05-06T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt.html"><![CDATA[<p>This post is about: How to modify post excerpt in Jekyll generated blog.</p>
+
+<h3 id="post-excerpts">Post excerpts</h3>
+<p>To display post excerpt in a post list, simply use “excerpt” variable on a post.</p>
+
+<p><span class="liquid"><code class="language-plaintext highlighter-rouge">{{ post.excerpt }}</code></span></p>
+
+<p>By default, excerpt variable displays the first paragraph of post like this:
+<img src="/assets/postimages/20220507-1.png" alt="Post excerpt sample 1" title="Post excerpt sapmle 1" /></p>
+
+<h3 id="customize-excerpt-length">Customize excerpt length</h3>
+<p>To customize the length of excerpt, add “excerpt_separator” to post’s front matter or _config.yml.</p>
+
+<p><span class="liquid">excerpt_separator: &lt;!<code class="language-plaintext highlighter-rouge">--more--</code>&gt;</span></p>
+
+<p>Then add &lt;!<code class="language-plaintext highlighter-rouge">--more--</code>&gt; in a post, wherever you want to split the content.
+<img src="/assets/postimages/20220507-2.png" alt="Post excerpt sample 2" title="Post excerpt sample 2" /></p>
+
+<p>If you don’t add or forget to add a separator to your post, “excerpt” variable shows a whole content of your post.</p>
+
+<h3 id="another-way-to-show-excerpts">Another way to show excerpts</h3>
+<p>There is another way to show post excerpts, using Liquid filters.</p>
+
+<p><span class="liquid">truncatewords</span> shortens a string down to the number of words specified as an argument, and add an ellipsis(…) at the end of the string.</p>
+
+<p>For example, this will display first 30 words of a post<br />
+<span class="liquid">{{ post.content | truncatewords: 30 }}</span></p>
+
+<p>like this:<br />
+<img src="/assets/postimages/20220507-3.png" alt="Post excerpt sample 3" title="Post excerpt sample 3" /></p>
+
+<p>However, downside of using truncatewords filter is, if any headers are included within the specified number of words, the result doesn’t look right, like this:<br />
+<img src="/assets/postimages/20220507-4.png" alt="Post excerpt sample 4" title="Post excerpt sample 4" /><br />
+This is not cool.<br />
+And the same thing happens when you use excerpt_separator, if you add separator after some header in you post.</p>
+
+<p>So, in some case <span class="liquid">truncatewords</span> filter works, in other case it doesn’t. For now, this blog uses “excerpt” variable to display post excerpts. I will continue working on this.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>]]></content><author><name>Ai</name></author><category term="Coding" /><category term="Jekyll" /><category term="HTML" /><category term="CSS" /><category term="Blog" /><summary type="html"><![CDATA[This post is about: How to modify post excerpt in Jekyll generated blog.]]></summary></entry><entry><title type="html">Hello World</title><link href="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html" rel="alternate" type="text/html" title="Hello World" /><published>2022-05-05T00:00:00+09:00</published><updated>2022-05-05T00:00:00+09:00</updated><id>https://blog.codedlovely.net/blogging/2022/05/05/hello-world</id><content type="html" xml:base="https://blog.codedlovely.net/blogging/2022/05/05/hello-world.html"><![CDATA[<p>It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.</p>
 
 <p>I’ve been working on this blog for the last couple of days, and finally launched with subdomain of codedlovely.net. I built this blog from scratch while referring to the Jekyll official documentation. Ah, this sense of accomplishment ☺.</p>
 
@@ -6,7 +46,7 @@
 
 <hr />
 
-<p>These days I’m exploring the music genre called “raudo-rokku (loud rock)” in Japan, a type of rock music, since for some reason it appeared in my Spotify recommendation weeks ago. Though I’ve never been an avid rock music fan, I think I’m developing a taste for this kind of music.</p>
+<p>These days I’m exploring the music genre called “raudo-rokku (loud rock)” in Japan, a type of rock music, since for some reason it appeared in my Spotify recommendation weeks ago. Though I’ve never been an avid rock music fan, as I keep listening to I think I’m developing a taste for this kind of music.</p>
 
 <hr />
 
@@ -15,4 +55,4 @@
   <p>“Light travels faster than sound. This is why some people appear bright until you hear them speak.”<span> - Alan Dundes</span></p>
 </blockquote>
 
-<p>See you <i class="fa-solid fa-hand-spock"></i></p>]]></content><author><name>Ai</name></author><category term="Blogging" /><summary type="html"><![CDATA[It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.]]></summary></entry></feed>
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>]]></content><author><name>Ai</name></author><category term="Blogging" /><category term="" /><summary type="html"><![CDATA[It seems that the rainy season has come in Okinawa. It’s a little chilly even when I’m indoors, but some children with a lot of energy are playing at the outdoor swimming pool.]]></summary></entry></feed>

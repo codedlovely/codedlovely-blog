@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My personal blog">
+    <meta name="author" content="Ai Kawasaki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jekyll: Modifying Post Excerpt &raquo; CodedLovely Blog</title>
+
+    <link rel="stylesheet" href="https://blog.codedlovely.net/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://blog.codedlovely.net/assets/images/favicon-ff.png">
+    <script src="https://blog.codedlovely.net/assets/js/javascript.js" defer></script>
+    <script src="https://kit.fontawesome.com/25514ad6fc.js" crossorigin="anonymous"></script>
+    <link type="application/atom+xml" rel="alternate" href="https://blog.codedlovely.net/feed.xml" title="CodedLovely Blog" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Jekyll: Modifying Post Excerpt | CodedLovely Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Jekyll: Modifying Post Excerpt" />
+<meta name="author" content="Ai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This post is about: How to modify post excerpt in Jekyll generated blog." />
+<meta property="og:description" content="This post is about: How to modify post excerpt in Jekyll generated blog." />
+<link rel="canonical" href="https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt.html" />
+<meta property="og:url" content="https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt.html" />
+<meta property="og:site_name" content="CodedLovely Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-06T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jekyll: Modifying Post Excerpt" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ai"},"dateModified":"2022-05-06T00:00:00+09:00","datePublished":"2022-05-06T00:00:00+09:00","description":"This post is about: How to modify post excerpt in Jekyll generated blog.","headline":"Jekyll: Modifying Post Excerpt","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt.html"},"url":"https://blog.codedlovely.net/coding/2022/05/06/jekyll-modify-post-excerpt.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <div id="header">
+        <h1>CodedLovely Blog</h1>
+        <span>A note about what I have learned so far.</span>
+        <ul>
+  
+  <li>
+    <a href="/" >Home</a>
+  </li>
+  
+  <li>
+    <a href="/about.html" >About</a>
+  </li>
+  
+  <li>
+    <a href="https://www.codedlovely.net">Portfolio</a>
+  </li>
+</ul>
+    </div>
+    
+    <h2>Jekyll: Modifying Post Excerpt</h2>
+
+<p class="meta">
+    06 May 2022
+    
+    
+</p>
+
+<div class="postcontent">
+  <p>This post is about: How to modify post excerpt in Jekyll generated blog.</p>
+
+<h3 id="post-excerpts">Post excerpts</h3>
+<p>To display post excerpt in a post list, simply use “excerpt” variable on a post.</p>
+
+<p><span class="liquid"><code class="language-plaintext highlighter-rouge">{{ post.excerpt }}</code></span></p>
+
+<p>By default, excerpt variable displays the first paragraph of post like this:
+<img src="/assets/postimages/20220507-1.png" alt="Post excerpt sample 1" title="Post excerpt sapmle 1" /></p>
+
+<h3 id="customize-excerpt-length">Customize excerpt length</h3>
+<p>To customize the length of excerpt, add “excerpt_separator” to post’s front matter or _config.yml.</p>
+
+<p><span class="liquid">excerpt_separator: &lt;!<code class="language-plaintext highlighter-rouge">--more--</code>&gt;</span></p>
+
+<p>Then add &lt;!<code class="language-plaintext highlighter-rouge">--more--</code>&gt; in a post, wherever you want to split the content.
+<img src="/assets/postimages/20220507-2.png" alt="Post excerpt sample 2" title="Post excerpt sample 2" /></p>
+
+<p>If you don’t add or forget to add a separator to your post, “excerpt” variable shows a whole content of your post.</p>
+
+<h3 id="another-way-to-show-excerpts">Another way to show excerpts</h3>
+<p>There is another way to show post excerpts, using Liquid filters.</p>
+
+<p><span class="liquid">truncatewords</span> shortens a string down to the number of words specified as an argument, and add an ellipsis(…) at the end of the string.</p>
+
+<p>For example, this will display first 30 words of a post<br />
+<span class="liquid">{{ post.content | truncatewords: 30 }}</span></p>
+
+<p>like this:<br />
+<img src="/assets/postimages/20220507-3.png" alt="Post excerpt sample 3" title="Post excerpt sample 3" /></p>
+
+<p>However, downside of using truncatewords filter is, if any headers are included within the specified number of words, the result doesn’t look right, like this:<br />
+<img src="/assets/postimages/20220507-4.png" alt="Post excerpt sample 4" title="Post excerpt sample 4" /><br />
+This is not cool.<br />
+And the same thing happens when you use excerpt_separator, if you add separator after some header in you post.</p>
+
+<p>So, in some case <span class="liquid">truncatewords</span> filter works, in other case it doesn’t. For now, this blog uses “excerpt” variable to display post excerpts. I will continue working on this.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>
+
+</div>
+
+<footer class="postNavigation">
+  <div class="prevpost">
+    
+    <a class="postPrev" href="/blogging/2022/05/05/hello-world.html">
+        &laquo; Hello World
+    </a>
+    
+  </div>
+  <div class="nextpost">
+    
+  </div>
+  </footer>
+
+
+    <div id="footer">
+        <div id="copyright"><!----></div>
+        <ul>
+            <li>
+                <a href="mailto:hello@codedlovely.net">
+                    <i class="fa-solid fa-at"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.codedlovely.net" title="codedlovely.net">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/codedlovely.ig/" title="Instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pinterest.jp/codedlovely/" title="Pinterest" target="_blank">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/codedlovely" title="GitHub" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/aikawasaki/" title="LinkedIn" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
