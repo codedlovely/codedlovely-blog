@@ -57,6 +57,8 @@ blockquote span { display: block; text-align: right; font-style: normal; font-si
 
 .liquid { background-color: #505050; color: #ffffff; border-radius: 0.4rem; padding: 0 0.8rem; }
 
+.samplecode { background-color: #ececec; display: inline-block; padding: 0.3rem 0.6rem; }
+
 .language-plaintext { font-family: 'Tajawal', sans-serif; font-size: 20px; font-weight: 300; }
 
 p img { max-width: 600px; border: 1px solid #505050; }

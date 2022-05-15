@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My personal blog">
+    <meta name="author" content="Ai Kawasaki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jekyll: Modifying Date and Time Format &raquo; CodedLovely Blog</title>
+
+    <link rel="stylesheet" href="https://blog.codedlovely.net/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://blog.codedlovely.net/assets/images/favicon-ff.png">
+    <script src="https://blog.codedlovely.net/assets/js/javascript.js" defer></script>
+    <script src="https://kit.fontawesome.com/25514ad6fc.js" crossorigin="anonymous"></script>
+    <link type="application/atom+xml" rel="alternate" href="https://blog.codedlovely.net/feed.xml" title="CodedLovely Blog" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Jekyll: Modifying Date and Time Format | CodedLovely Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Jekyll: Modifying Date and Time Format" />
+<meta name="author" content="Ai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi there, Today I’m going to write how to change date and time format of posts on Jekyll." />
+<meta property="og:description" content="Hi there, Today I’m going to write how to change date and time format of posts on Jekyll." />
+<link rel="canonical" href="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html" />
+<meta property="og:url" content="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html" />
+<meta property="og:site_name" content="CodedLovely Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-15T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Jekyll: Modifying Date and Time Format" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ai"},"dateModified":"2022-05-15T00:00:00+09:00","datePublished":"2022-05-15T00:00:00+09:00","description":"Hi there, Today I’m going to write how to change date and time format of posts on Jekyll.","headline":"Jekyll: Modifying Date and Time Format","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html"},"url":"https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+<body>
+    <div id="header">
+        <h1>CodedLovely Blog</h1>
+        <span>A note about what I have learned so far.</span>
+        <ul>
+  
+  <li>
+    <a href="/" >Home</a>
+  </li>
+  
+  <li>
+    <a href="/about.html" >About</a>
+  </li>
+  
+  <li>
+    <a href="https://www.codedlovely.net">Portfolio</a>
+  </li>
+</ul>
+    </div>
+    
+    <h2>Jekyll: Modifying Date and Time Format</h2>
+
+<p class="meta">
+    15 May 2022
+    
+    
+</p>
+
+<div class="postcontent">
+  <p>Hi there,<br />
+Today I’m going to write how to change date and time format of posts on Jekyll.</p>
+
+<h3 id="date-and-time-of-a-post">Date and time of a post</h3>
+<p>To display a post published date, we can use a variable
+<span class="liquid"><code class="language-plaintext highlighter-rouge">{{ page.date }}</code></span>.
+The date and time look like this:<br />
+<code class="samplecode">2022-05-15 00:00:00 +0900</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">{{ page.date }}</code> can be manually set in a post front matter
+in the following format:
+<code class="samplecode">---<br />
+date: 2022-05-15 09:30:00 +0900<br />
+---</code></p>
+
+<p>Published time and time offset can be omitted.
+In that case, they are displayed like <code class="samplecode">00:00:00 +0900</code>,
+time offset is according to your timezone.</p>
+
+<h3 id="using-liquid-filters">Using liquid filters</h3>
+<p>Here are some liquid filters available to format date and time.</p>
+
+<p><span class="liquid">{{ page.date | date_to_string }}</span>
+converts post date to short format<br />
+like this:<br />
+<code class="samplecode">15 Apr 2022</code></p>
+
+<p><span class="liquid">{{ page.date | date_to_long_string }}</span>
+converts post date to long format<br />
+like this:<br />
+<code class="samplecode">15 April 2022</code></p>
+
+<h3 id="formatting-published-date">Formatting published date</h3>
+<p>There are several ways to format post date.</p>
+
+<p>For example,<br />
+<span class="liquid">{{ page.date | date: “%a %b %d, %y” }}</span><br />
+will display<br />
+<code class="samplecode">Fri Apr 15, 22</code></p>
+
+<p>When we use uppercase <span class="liquid">%A</span>, <span class="liquid">%B</span>
+ and <span class="liquid">%Y</span> as filters,<br />
+it diplays the date like this:<br />
+<code class="samplecode">Friday April 15, 2022</code></p>
+
+<p><span class="liquid">%m</span> displays month in 2 digits number.<br />
+For example, this filters display month and day<br />
+<span class="liquid">{{ page.date | date: “%m-%d” }}</span><br />
+and it will be like this:<br />
+<code class="samplecode">04-15</code></p>
+
+<h3 id="formatting-published-time">Formatting published time</h3>
+<p>To display post’s published time, we can use this.<br />
+<span class="liquid">{{ page.date | date: “%H:%M” }}</span><br />
+It will be like this:<br />
+<code class="samplecode">09:30</code></p>
+
+<p>Other ways to format time are using <span class="liquid">%r</span> and <span class="liquid">%R</span>.<br />
+Each will looks like this:<br />
+<code class="samplecode">01:25:00 PM</code> and
+<code class="samplecode">13:25</code></p>
+
+<h3 id="a-conclusion">A conclusion</h3>
+<p>Now we know there are many filters available to format blog post published date and time. We are always able to do some experiments to find out which way will suit our blog theme.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>
+
+</div>
+
+<footer class="postNavigation">
+  <div class="prevpost">
+    
+    <a class="postPrev" href="/coding/2022/05/07/jekyll-modify-post-excerpt.html">
+        &laquo; Jekyll: Modifying Post Excerpt
+    </a>
+    
+  </div>
+  <div class="nextpost">
+    
+  </div>
+  </footer>
+
+
+    <div id="footer">
+        <div id="copyright"><!----></div>
+        <ul>
+            <li>
+                <a href="mailto:hello@codedlovely.net">
+                    <i class="fa-solid fa-at"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.codedlovely.net" title="codedlovely.net">
+                    <i class="fa-solid fa-globe"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/codedlovely.ig/" title="Instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pinterest.jp/codedlovely/" title="Pinterest" target="_blank">
+                    <i class="fa-brands fa-pinterest"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/codedlovely" title="GitHub" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/aikawasaki/" title="LinkedIn" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

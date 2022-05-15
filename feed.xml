@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-08T10:49:32+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Jekyll: Modifying Post Excerpt</title><link href="https://blog.codedlovely.net/coding/2022/05/07/jekyll-modify-post-excerpt.html" rel="alternate" type="text/html" title="Jekyll: Modifying Post Excerpt" /><published>2022-05-07T00:00:00+09:00</published><updated>2022-05-07T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/07/jekyll-modify-post-excerpt</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/07/jekyll-modify-post-excerpt.html"><![CDATA[<p>This post is about: How to modify post excerpt in Jekyll generated blog.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-15T14:15:27+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Jekyll: Modifying Date and Time Format</title><link href="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html" rel="alternate" type="text/html" title="Jekyll: Modifying Date and Time Format" /><published>2022-05-15T00:00:00+09:00</published><updated>2022-05-15T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html"><![CDATA[<p>Hi there,<br />
+Today I’m going to write how to change date and time format of posts on Jekyll.</p>
+
+<h3 id="date-and-time-of-a-post">Date and time of a post</h3>
+<p>To display a post published date, we can use a variable
+<span class="liquid"><code class="language-plaintext highlighter-rouge">{{ page.date }}</code></span>.
+The date and time look like this:<br />
+<code class="samplecode">2022-05-15 00:00:00 +0900</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">{{ page.date }}</code> can be manually set in a post front matter
+in the following format:
+<code class="samplecode">---<br />
+date: 2022-05-15 09:30:00 +0900<br />
+---</code></p>
+
+<p>Published time and time offset can be omitted.
+In that case, they are displayed like <code class="samplecode">00:00:00 +0900</code>,
+time offset is according to your timezone.</p>
+
+<h3 id="using-liquid-filters">Using liquid filters</h3>
+<p>Here are some liquid filters available to format date and time.</p>
+
+<p><span class="liquid">{{ page.date | date_to_string }}</span>
+converts post date to short format<br />
+like this:<br />
+<code class="samplecode">15 Apr 2022</code></p>
+
+<p><span class="liquid">{{ page.date | date_to_long_string }}</span>
+converts post date to long format<br />
+like this:<br />
+<code class="samplecode">15 April 2022</code></p>
+
+<h3 id="formatting-published-date">Formatting published date</h3>
+<p>There are several ways to format post date.</p>
+
+<p>For example,<br />
+<span class="liquid">{{ page.date | date: “%a %b %d, %y” }}</span><br />
+will display<br />
+<code class="samplecode">Fri Apr 15, 22</code></p>
+
+<p>When we use uppercase <span class="liquid">%A</span>, <span class="liquid">%B</span>
+ and <span class="liquid">%Y</span> as filters,<br />
+it diplays the date like this:<br />
+<code class="samplecode">Friday April 15, 2022</code></p>
+
+<p><span class="liquid">%m</span> displays month in 2 digits number.<br />
+For example, this filters display month and day<br />
+<span class="liquid">{{ page.date | date: “%m-%d” }}</span><br />
+and it will be like this:<br />
+<code class="samplecode">04-15</code></p>
+
+<h3 id="formatting-published-time">Formatting published time</h3>
+<p>To display post’s published time, we can use this.<br />
+<span class="liquid">{{ page.date | date: “%H:%M” }}</span><br />
+It will be like this:<br />
+<code class="samplecode">09:30</code></p>
+
+<p>Other ways to format time are using <span class="liquid">%r</span> and <span class="liquid">%R</span>.<br />
+Each will looks like this:<br />
+<code class="samplecode">01:25:00 PM</code> and
+<code class="samplecode">13:25</code></p>
+
+<h3 id="a-conclusion">A conclusion</h3>
+<p>Now we know there are many filters available to format blog post published date and time. We are always able to do some experiments to find out which way will suit our blog theme.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>]]></content><author><name>Ai</name></author><category term="Coding" /><category term="Jekyll" /><category term="HTML" /><category term="Blog" /><summary type="html"><![CDATA[Hi there, Today I’m going to write how to change date and time format of posts on Jekyll.]]></summary></entry><entry><title type="html">Jekyll: Modifying Post Excerpt</title><link href="https://blog.codedlovely.net/coding/2022/05/07/jekyll-modify-post-excerpt.html" rel="alternate" type="text/html" title="Jekyll: Modifying Post Excerpt" /><published>2022-05-07T00:00:00+09:00</published><updated>2022-05-07T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/07/jekyll-modify-post-excerpt</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/07/jekyll-modify-post-excerpt.html"><![CDATA[<p>This post is about: How to modify post excerpt in Jekyll generated blog.</p>
 
 <h3 id="post-excerpts">Post excerpts</h3>
 <p>To display post excerpt in a post list, simply use “excerpt” variable on a post.</p>
