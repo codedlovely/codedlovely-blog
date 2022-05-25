@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-25T15:12:14+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Jekyll: Modifying Date and Time Format</title><link href="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html" rel="alternate" type="text/html" title="Jekyll: Modifying Date and Time Format" /><published>2022-05-15T00:00:00+09:00</published><updated>2022-05-15T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html"><![CDATA[<p>Hi there,<br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-25T15:15:00+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Jekyll: Modifying Date and Time Format</title><link href="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html" rel="alternate" type="text/html" title="Jekyll: Modifying Date and Time Format" /><published>2022-05-15T00:00:00+09:00</published><updated>2022-05-15T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/15/jekyll-modify-date-time.html"><![CDATA[<p>Hi there,<br />
 Today I’m going to write how to change date and time format of posts on Jekyll.</p>
 
 <h3 id="date-and-time-of-a-post">Date and time of a post</h3>
@@ -60,7 +60,7 @@ Each will looks like this:<br />
 <code class="samplecode">01:25:00 PM</code> and
 <code class="samplecode">13:25</code></p>
 
-<h3 id="a-conclusion">A conclusion</h3>
+<h3 id="conclusion">Conclusion</h3>
 <p>Now we know there are many filters available to format blog post published date and time. We are always able to do some experiments to find out which way will suit our blog theme.</p>
 
 <p>That’s all for today.</p>
