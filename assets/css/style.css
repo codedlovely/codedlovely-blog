@@ -33,11 +33,21 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Corben', sans-serif; font-weight: 300; }
 
 .postcontent ul li, .pagecontent ul li { margin-bottom: 1rem; }
 
+.postmeta { font-size: 1rem; }
+
 .pagination { margin: 6rem 0 3rem 0; display: flex; justify-content: space-between; align-items: center; flex: 1 1 auto; flex-wrap: wrap; }
 
 .postNavigation { margin: 4rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; flex: 1 1 auto; }
 
 @media (max-width: 420px) { .postNavigation { gap: 2rem; } }
+
+@media (min-width: 421px) { .postNavigation { gap: 1rem; } }
+
+.prevpost, .nextpost { max-width: 50%; }
+
+.nextpost { text-align: right; }
+
+@media (max-width: 420px) { .prevpost, .nextpost { max-width: 100%; } }
 
 #footer { padding: 6rem 0 3rem; display: flex; justify-content: center; align-items: center; gap: 2rem; flex: 1 1 auto; flex-wrap: wrap; }
 
