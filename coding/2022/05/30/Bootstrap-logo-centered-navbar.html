@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My personal blog">
+    <meta name="author" content="Ai Kawasaki">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap: Create Logo Centered Navigation Bar &raquo; CodedLovely Blog</title>
+
+    <link rel="stylesheet" href="https://blog.codedlovely.net/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="https://blog.codedlovely.net/assets/images/favicon-ff.png">
+    <script src="https://blog.codedlovely.net/assets/js/javascript.js" defer></script>
+    <script src="https://kit.fontawesome.com/25514ad6fc.js" crossorigin="anonymous"></script>
+    <link type="application/atom+xml" rel="alternate" href="https://blog.codedlovely.net/feed.xml" title="CodedLovely Blog" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bootstrap: Create Logo Centered Navigation Bar | CodedLovely Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Bootstrap: Create Logo Centered Navigation Bar" />
+<meta name="author" content="Ai" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy way to create a logo centered navigation with Bootstrap .navbar class." />
+<meta property="og:description" content="An easy way to create a logo centered navigation with Bootstrap .navbar class." />
+<link rel="canonical" href="https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar.html" />
+<meta property="og:url" content="https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar.html" />
+<meta property="og:site_name" content="CodedLovely Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-05-30T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bootstrap: Create Logo Centered Navigation Bar" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ai"},"dateModified":"2022-05-30T00:00:00+09:00","datePublished":"2022-05-30T00:00:00+09:00","description":"An easy way to create a logo centered navigation with Bootstrap .navbar class.","headline":"Bootstrap: Create Logo Centered Navigation Bar","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar.html"},"url":"https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+<body>
+    <div id="header">
+        <h1>CodedLovely Blog</h1>
+        <span>A note about what I have learned so far.</span>
+        <ul>
+  
+  <li>
+    <a href="/" >Home</a>
+  </li>
+  
+  <li>
+    <a href="/about.html" >About</a>
+  </li>
+  
+</ul>
+    </div>
+    
+    <h2>Bootstrap: Create Logo Centered Navigation Bar</h2>
+
+<p class="meta">
+    30 May 2022
+    
+    
+</p>
+
+<div class="postcontent">
+  <p>An easy way to create a logo centered navigation with Bootstrap .navbar class.</p>
+
+<h3 id="its-easy-but-not-easy-if-not-knowing">It’s easy but not easy if not knowing</h3>
+<p>That’s true for almost everything, right?</p>
+
+<p>Here’s a simple navbar screenshot. Brand logo and links line up horizontally. Without any modifications, navigation looks like this.</p>
+
+<p><img src="/assets/postimages/20220531-1.png" alt="Bootstrap navbar sample 1" title="Bootstrap navbar sample 1" /></p>
+
+<p>Then I wanted to put the logo in the top-center of the page and line up the centered links <strong><em>under</em></strong> the logo.
+So, how should I write codes for this?</p>
+
+<h3 id="all-i-need-is-this-and-a-dash-of-pepper">All I need is this (and a dash of pepper)</h3>
+<p>Well, this is the solution I came up with.</p>
+
+<ol>
+  <li>Create new class for the wrapper of navbar contents and</li>
+  <li>Add <span class="liquid">flex-direction: column;</span> to it, and voila!</li>
+</ol>
+
+<p><img src="/assets/postimages/20220531-2.png" alt="Bootstrap navbar sample 2" title="Bootstrap navbar sample 2" /></p>
+
+<p>To me, it’s like magic. Seriously. Add just one class and then these elements completely change their behavior. That’s one part of the reason why I keep learning how to code. I’m learning how to use magic. Anyway, here’s a sample.</p>
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="wvymvgL" data-user="codedlovely" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/codedlovely/pen/wvymvgL">
+  Bootstrap Logo Centered Navbar</a> by Ai Kawasaki (<a href="https://codepen.io/codedlovely">@codedlovely</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<p>If you’re viewing this sample on desktop/laptop and the navigation menu is initially collapsed, try clicking HTML button on and then off. There might be a way to display result in full width, but I haven’t figured out yet.</p>
+
+<h3 id="note-about-a-dash-of-pepper-part">Note about “a dash of pepper” part</h3>
+<p>For mobile/small displays, navigation collapses at the breakpoint you specified, so you may want to modify the elements’ position with changing flex-direction and text alignment.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>
+
+</div>
+
+<div class="postmeta">
+  
+    Category:
+    Coding
+  
+  <br>
+  
+    Tags:
+    Bootstrap, CodePen sample, HTML
+  
+</div>
+
+<footer class="postNavigation">
+  <div class="prevpost">
+    
+    <a class="postPrev" href="/coding/2022/05/27/javascript-collapse-menu.html">
+        &laquo; JavaScript: Collapse Hamburger Menu on Single Page Website
+    </a>
+    
+  </div>
+  <div class="nextpost">
+    
+  </div>
+</footer>
+
+
+    <div id="footer">
+        <div id="copyright"><!----></div>
+        <ul>
+            <li>
+                <a href="mailto:hello@codedlovely.net">
+                    <i class="fa-solid fa-at"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/codedlovely" title="GitHub" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/codedlovely" title="CodePen" target="_blank">
+                    <i class="fa-brands fa-codepen"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

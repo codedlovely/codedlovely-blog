@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-29T12:26:11+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">JavaScript: Collapse Hamburger Menu on Single Page Website</title><link href="https://blog.codedlovely.net/coding/2022/05/27/javascript-collapse-menu.html" rel="alternate" type="text/html" title="JavaScript: Collapse Hamburger Menu on Single Page Website" /><published>2022-05-27T00:00:00+09:00</published><updated>2022-05-27T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/27/javascript-collapse-menu</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/27/javascript-collapse-menu.html"><![CDATA[<p>I’m going to write about how to make a hamburger menu with Bootstrap collapse(close) when navigation links are clicked on a single page website.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-05-30T20:45:06+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Bootstrap: Create Logo Centered Navigation Bar</title><link href="https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar.html" rel="alternate" type="text/html" title="Bootstrap: Create Logo Centered Navigation Bar" /><published>2022-05-30T00:00:00+09:00</published><updated>2022-05-30T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/30/Bootstrap-logo-centered-navbar.html"><![CDATA[<p>An easy way to create a logo centered navigation with Bootstrap .navbar class.</p>
+
+<h3 id="its-easy-but-not-easy-if-not-knowing">It’s easy but not easy if not knowing</h3>
+<p>That’s true for almost everything, right?</p>
+
+<p>Here’s a simple navbar screenshot. Brand logo and links line up horizontally. Without any modifications, navigation looks like this.</p>
+
+<p><img src="/assets/postimages/20220531-1.png" alt="Bootstrap navbar sample 1" title="Bootstrap navbar sample 1" /></p>
+
+<p>Then I wanted to put the logo in the top-center of the page and line up the centered links <strong><em>under</em></strong> the logo.
+So, how should I write codes for this?</p>
+
+<h3 id="all-i-need-is-this-and-a-dash-of-pepper">All I need is this (and a dash of pepper)</h3>
+<p>Well, this is the solution I came up with.</p>
+
+<ol>
+  <li>Create new class for the wrapper of navbar contents and</li>
+  <li>Add <span class="liquid">flex-direction: column;</span> to it, and voila!</li>
+</ol>
+
+<p><img src="/assets/postimages/20220531-2.png" alt="Bootstrap navbar sample 2" title="Bootstrap navbar sample 2" /></p>
+
+<p>To me, it’s like magic. Seriously. Add just one class and then these elements completely change their behavior. That’s one part of the reason why I keep learning how to code. I’m learning how to use magic. Anyway, here’s a sample.</p>
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="wvymvgL" data-user="codedlovely" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/codedlovely/pen/wvymvgL">
+  Bootstrap Logo Centered Navbar</a> by Ai Kawasaki (<a href="https://codepen.io/codedlovely">@codedlovely</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async="" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+<p>If you’re viewing this sample on desktop/laptop and the navigation menu is initially collapsed, try clicking HTML button on and then off. There might be a way to display result in full width, but I haven’t figured out yet.</p>
+
+<h3 id="note-about-a-dash-of-pepper-part">Note about “a dash of pepper” part</h3>
+<p>For mobile/small displays, navigation collapses at the breakpoint you specified, so you may want to modify the elements’ position with changing flex-direction and text alignment.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>]]></content><author><name>Ai</name></author><category term="Coding" /><category term="Bootstrap" /><category term="CodePen sample" /><category term="HTML" /><summary type="html"><![CDATA[An easy way to create a logo centered navigation with Bootstrap .navbar class.]]></summary></entry><entry><title type="html">JavaScript: Collapse Hamburger Menu on Single Page Website</title><link href="https://blog.codedlovely.net/coding/2022/05/27/javascript-collapse-menu.html" rel="alternate" type="text/html" title="JavaScript: Collapse Hamburger Menu on Single Page Website" /><published>2022-05-27T00:00:00+09:00</published><updated>2022-05-27T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/27/javascript-collapse-menu</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/27/javascript-collapse-menu.html"><![CDATA[<p>I’m going to write about how to make a hamburger menu with Bootstrap collapse(close) when navigation links are clicked on a single page website.</p>
 
 <h3 id="problem">Problem</h3>
 <p>While Bootstrap <code class="samplecode">.navbar</code> is very flexible, there is a problem when it’s used on a single page website. It doesn’t automatically collapse when you click an item if it’s a link to an anchor on the same page. I guess many Bootstrap users had experienced this, because it’s been a while since single page websites became a trend.</p>
