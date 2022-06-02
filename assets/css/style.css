@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Tajawal:wght@300;400;700;800;900&display=swap");
-:root { --main-color: #505050; --main-color-cont: #ffffff; --acc-color-dark: #ff7575; --acc-color-dark-rgb: rgb(255, 117, 117); --acc-color-shadow: #ff0000; --acc-color-gray-dark: #a0a0a0; --acc-color-gray-light: #ececec; --acc-color-spock: rgb(230, 199, 160); }
+:root { --main-color: #505050; --main-color-cont: #ffffff; --acc-color-dark: #ff7575; --acc-color-shadow: #ff0000; --acc-color-gray-dark: #a0a0a0; --acc-color-gray-light: #ececec; --acc-color-spock: #e8ceaf; }
 
 html { scroll-behavior: smooth; }
 
