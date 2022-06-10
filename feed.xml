@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-06-02T14:04:27+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">Bootstrap: Create Logo Centered Navigation Bar</title><link href="https://blog.codedlovely.net/coding/2022/05/30/bootstrap-logo-centered-navbar.html" rel="alternate" type="text/html" title="Bootstrap: Create Logo Centered Navigation Bar" /><published>2022-05-30T00:00:00+09:00</published><updated>2022-05-30T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/30/bootstrap-logo-centered-navbar</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/30/bootstrap-logo-centered-navbar.html"><![CDATA[<p>An easy way to create a logo centered navigation with Bootstrap .navbar class.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://blog.codedlovely.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://blog.codedlovely.net/" rel="alternate" type="text/html" /><updated>2022-06-10T13:51:59+09:00</updated><id>https://blog.codedlovely.net/feed.xml</id><title type="html">CodedLovely Blog</title><subtitle>A note about what I have learned so far.</subtitle><entry><title type="html">CSS: Custom Properties + Background Color Opacity</title><link href="https://blog.codedlovely.net/coding/2022/06/10/css-custom-property-and-color-opacity.html" rel="alternate" type="text/html" title="CSS: Custom Properties + Background Color Opacity" /><published>2022-06-10T00:00:00+09:00</published><updated>2022-06-10T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/06/10/css-custom-property-and-color-opacity</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/06/10/css-custom-property-and-color-opacity.html"><![CDATA[<p>These are the basics of CSS custom properties and how to apply opacity to a background color using them.</p>
+
+<h3 id="create-a-custom-property-for-color">Create a custom property for color</h3>
+<p>Let’s create a custom property for a background color. In your CSS file, declaring a custom property looks like this:</p>
+
+<p><code class="samplecode">
+:root {<br />
+&emsp;--background-color: #ff7575;<br />
+}
+</code></p>
+
+<p>Custom property should start with two dashes ‘<code class="language-plaintext highlighter-rouge">--</code>’. It’s always a good idea that giving the property a name that clearly shows its purpose. <br />
+If you need to use custom properties site-wide, you can declare them at root like this sample, or write them inside of html selector, both are fine.</p>
+
+<p>Then using custom property looks like this:</p>
+
+<p><code class="samplecode">
+div {<br />
+&emsp;background-color: var(--background-color);<br />
+}
+</code></p>
+
+<p>In this sample, color #ff7575 is given to div elements as a background color.</p>
+
+<p>One of the benefits of using custom properties is that it can reduce repetitions in your code. When you need to apply the same background color to multiple elements, it’s much easier to use custom property like above sample than write a color code (#ff7575) many times. And it also makes it easier to maintain the code.</p>
+
+<h3 id="create-a-custom-property-of-rgb-values">Create a custom property of RGB values</h3>
+<p>We just created a custom property for a background color, let’s apply it to an element.</p>
+
+<p><code class="samplecode">
+.nice-background {<br />
+&emsp;background-color: var(--background-color);<br />
+}
+</code></p>
+
+<p><img src="/assets/postimages/20220610-1.png" alt="div element sample 1" title="div with background color sample 1" /></p>
+
+<p>Now this page has a beautiful underwater photo as a background, let’s make this nice div transparent. What do we do when we want to apply opacity to an element? An opacity parameter can be used like this:</p>
+
+<p><code class="samplecode">
+opacity: 0.5;
+</code></p>
+
+<p>Give opacity to this nice div and let’s take a look at it:
+<img src="/assets/postimages/20220610-2.png" alt="div element sample 2" title="div with opacity sample 2" /></p>
+
+<p>We can see the background image through this div, but the text “Nice DIV” also became transparent. This is not cool and a little hard to read that text. How are we able to make only the background color transparent?</p>
+
+<p>There is a way to solve this. Let’s create another custom property.</p>
+
+<p><code class="samplecode">
+--background-color-rgb: 255, 117, 117;
+</code></p>
+
+<p>This new custom property has RGB values of the same color (#ff7575), like rgb(255, 177, 117). We can use this format to add opacity to color. Don’t include the word “rgb”, round bracket and commas in a custom property.</p>
+
+<p><code class="samplecode">
+.awesome-background {<br />
+&emsp;background-color: rgba(var(--background-color-rgb), 0.5);<br />
+}
+</code></p>
+
+<p>Here’s a sample:
+<img src="/assets/postimages/20220610-3.png" alt="div element sample 3" title="div with opacity sample 3" /></p>
+
+<p>Using RGB values makes only background color transparent, and we can read “Awesome DIV” text clearly.</p>
+
+<h3 id="takeaway">Takeaway</h3>
+<p>When you use a custom property of color and you want to apply opacity to it on some elements, it will come in handy to create another custom property consists of RGB values of the same color.</p>
+
+<p>That’s all for today.</p>
+
+<p>See you <i class="fa-solid fa-hand-spock"></i></p>
+
+<p>Photo credit: Jeremy Bishop on <a href="https://unsplash.com/photos/7g5juwG5jrQ" title="Jeremy Bishop on Unsplash" target="_blank">Unsplash</a></p>]]></content><author><name>Ai</name></author><category term="Coding" /><category term="CSS" /><category term="alpha channel" /><category term="RGBA" /><summary type="html"><![CDATA[These are the basics of CSS custom properties and how to apply opacity to a background color using them.]]></summary></entry><entry><title type="html">Bootstrap: Create Logo Centered Navigation Bar</title><link href="https://blog.codedlovely.net/coding/2022/05/30/bootstrap-logo-centered-navbar.html" rel="alternate" type="text/html" title="Bootstrap: Create Logo Centered Navigation Bar" /><published>2022-05-30T00:00:00+09:00</published><updated>2022-05-30T00:00:00+09:00</updated><id>https://blog.codedlovely.net/coding/2022/05/30/bootstrap-logo-centered-navbar</id><content type="html" xml:base="https://blog.codedlovely.net/coding/2022/05/30/bootstrap-logo-centered-navbar.html"><![CDATA[<p>An easy way to create a logo centered navigation with Bootstrap .navbar class.</p>
 
 <h3 id="its-easy-but-not-easy-if-not-knowing">It’s easy but not easy if not knowing</h3>
 <p>That’s true for almost everything, right?</p>
